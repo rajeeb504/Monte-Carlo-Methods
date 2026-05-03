@@ -1,7 +1,7 @@
 import random
 
 
-def Expectation_2H(N= 100000):
+def Expectation_nH(n, N= 100000):
   
   s = ['H', 'T']
   total = 0
@@ -9,7 +9,7 @@ def Expectation_2H(N= 100000):
   for _ in range(N):
     toss = 0
     heads = 0
-    while heads < 2:
+    while heads < n:
       toss += 1
       if random.choice(s) == 'H':
         heads += 1
